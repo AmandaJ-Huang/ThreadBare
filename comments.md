@@ -31,3 +31,6 @@ ThreadTwoHashMapB - END T1
 ThreadTwoHashMapB - END T2
 ThreadTwoHashMapB - END T3
 ```
+
+* The IllegalThreadStateException is happening because 2 threads are attempting to run the threads from the threadMap.
+* One of the threads will try to start a thread that has already started (ex. Run of 6 is trying to start T4 when Run of 8 has already started it).
